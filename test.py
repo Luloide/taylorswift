@@ -1,0 +1,2 @@
+from taylorswift import *
+taylorswift()

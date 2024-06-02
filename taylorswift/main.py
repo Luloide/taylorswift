@@ -43,7 +43,7 @@ def taylorswift():
 		together[i]=float(set[11])
 		i+=1
 
-	texts=np.loadtxt(os.path.join(PACKAGEDIR, 'answertext.txt'),delimiter='#',dtype='str')
+	texts=np.loadtxt(os.path.join(PACKAGEDIR, 'answertext.txt'),delimiter='#',comments='%',dtype='str')
 
 	######################################################################################
 	print('''
@@ -166,22 +166,22 @@ def taylorswift():
 	oklist=np.zeros(20)
 	index=0
 	for n in range(0,40):
-	    if any(np.abs(neterr)==n):
-	        ok=np.where(np.abs(neterr)==n)[0]
-	        for x in ok:
-	            oklist[index]=x
-	            index+=1
-	        if index>4:
-	            break
+		if any(np.abs(neterr)==n):
+			ok=np.where(np.abs(neterr)==n)[0]
+			for x in ok:
+				oklist[index]=x
+				index+=1
+				if index>4:
+					break
 
 	okintlist=[int(i) for i in oklist]
 	finalok=okintlist[0:5]
 
 	print('Here are the top five songs that match your mood:')
 	for x,item in enumerate(finalok):
-	    n=x+1
-	    print(str(n)+': '+title[item])
-	    print(texts[item])
+		n=x+1
+		print(str(n)+': '+title[item])
+		print(texts[item])
 
 
 

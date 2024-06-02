@@ -8,7 +8,7 @@ import sys
 from setuptools import setup
 
 sys.path.insert(0, "taylorswift")
-from version import __version__
+__version__ = "0.1.1rc1"
 
 
 long_description = \
