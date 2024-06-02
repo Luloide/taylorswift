@@ -171,8 +171,8 @@ def taylorswift():
 			for x in ok:
 				oklist[index]=x
 				index+=1
-				if index>4:
-					break
+			if index>4:
+				break
 
 	okintlist=[int(i) for i in oklist]
 	finalok=okintlist[0:5]
